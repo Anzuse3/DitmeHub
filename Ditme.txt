@@ -9811,7 +9811,7 @@ spawn(function()
     end
 end)
 
-Dungeon:Toggle("Auto Thức Tỉnh",_G.Auto_Awake,function(value)
+Dungeon:Toggle("Auto ",_G.Auto_Awake,function(value)
  _G.Auto_Awake = value 
 end)
 
@@ -9837,7 +9837,7 @@ spawn(function()
 end)
 
   
-  Dungeon:Button("Đảo Tiếp Theo",function()
+  Dungeon:Button("Next Island",function()
    pcall(function()
     if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5") then
     topos(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5").CFrame*CFrame.new(0,70,100))
@@ -9893,9 +9893,9 @@ function topos(Pos)
 end
 end
 
-Dungeon:Seperator("\\\\\  Raid Law  //")
+Dungeon:Seperator("\\\\\  Law Dungeon  //")
 
-Dungeon:Toggle("Auto Mua Chip Raid Law",_G.Auto_Buy_Law_Chip,function(value)
+Dungeon:Toggle("Auto Buy Law Chip",_G.Auto_Buy_Law_Chip,function(value)
  _G.Auto_Buy_Law_Chip = value
 end)
 
@@ -10003,17 +10003,17 @@ end
  }
  
  _G.SelectFruit = ""
- DevilFruit:Dropdown("Chọn Fruits Sniper",FruitList,function(value)
+ DevilFruit:Dropdown("Select Fruits Sniper",FruitList,function(value)
   _G.SelectFruit = value
   end)
  
- DevilFruit:Toggle("Auto Mua Fruit Sniper",_G.AutoBuyFruitSniper,function(value)
+ DevilFruit:Toggle("Auto Buy Fruit Sniper",_G.AutoBuyFruitSniper,function(value)
   _G.AutoBuyFruitSniper = value
   end)
  
  DevilFruit:Seperator(" Others ")
  
- DevilFruit:Dropdown("Selec Fruits Eat",FruitList,function(value)
+ DevilFruit:Dropdown("Select Fruits Eat",FruitList,function(value)
   _G.SelectFruitEat = value
   end)
  
