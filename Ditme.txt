@@ -10013,11 +10013,11 @@ end
  
  DevilFruit:Seperator(" Others ")
  
- DevilFruit:Dropdown("Chọn Fruits Ăn",FruitList,function(value)
+ DevilFruit:Dropdown("Selec Fruits Eat",FruitList,function(value)
   _G.SelectFruitEat = value
   end)
  
- DevilFruit:Toggle("Auto Ăn Fruit",_G.AutoEatFruit,function(value)
+ DevilFruit:Toggle("Auto Eat Fruit",_G.AutoEatFruit,function(value)
   _G.AutoEatFruit = value
   end)
  
@@ -10043,7 +10043,7 @@ end
    end)
   end)
  
- DevilFruit:Toggle("Auto Mua Fruit",_G.Random_Auto,function(value)
+ DevilFruit:Toggle("Auto Random Fruit",_G.Random_Auto,function(value)
   _G.Random_Auto = value
   end)
  
@@ -10062,7 +10062,7 @@ end
   end)
  
  
- DevilFruit:Toggle("Auto Vứt Fruit",_G.DropFruit,function(value)
+ DevilFruit:Toggle("Auto Drop Fruit",_G.DropFruit,function(value)
   _G.DropFruit = value
   end)
  
@@ -10097,7 +10097,7 @@ end
   end
   end)
  
- DevilFruit:Toggle("Auto Lưu Trữ Fruit",_G.AutoStoreFruit,function(value)
+ DevilFruit:Toggle("Auto Store Fruit",_G.AutoStoreFruit,function(value)
   _G.AutoStoreFruit = value
   end)
  
@@ -10118,7 +10118,7 @@ end
 		end)
  
  
- DevilFruit:Toggle("Nhặt Fruit",_G.BringFruit,function(value)
+ DevilFruit:Toggle("Grab Fruit",_G.BringFruit,function(value)
   _G.BringFruit = value
   pcall(function()
    while _G.BringFruit do wait(.1)
@@ -10135,7 +10135,7 @@ end
    end)
  end)
  
- DevilFruit:Toggle("Teleport Đến Spawn Fruit",false,function(value)
+ DevilFruit:Toggle("Teleport To Spawn Fruit",false,function(value)
  _G.Grabfruit = value
 end)
 
