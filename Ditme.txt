@@ -9055,7 +9055,7 @@ spawn(function()
 	end
 end)
 
-Stats:Button("Hoàn Trả Chỉ Số",function()
+Stats:Button("Hoàn Trả Chỉ",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Buy",1,2)
   end)
 
@@ -9064,7 +9064,7 @@ _G.Point = value
 return "Point : " .. tostring(value)
 end)
 
-P:Seperator(" PvP ")
+P:Seperator(" Combats ")
 
 P:Slider("Select Size Fov",1,1000,200,function(value)
 _G.Select_Size_Fov = value
@@ -9075,11 +9075,11 @@ P:Toggle("Show Fov",_G.Show_Fov,function(value)
  _G.Show_Fov = value
 end)
 
-P:Toggle("Aimbot",_G.Aimbot_Skill_Fov,function(value)
+P:Toggle("Aimbot Skill Fov",_G.Aimbot_Skill_Fov,function(value)
  _G.Aimbot_Skill_Fov = value
 end)
 
-P:Seperator(" Giết Player ")
+P:Seperator(" Kill Player ")
 
 
 Playerslist = {}
@@ -9100,7 +9100,7 @@ Playerslist = {}
         end
     end)
 
-P:Toggle("Quan Sát Player",_G.Spectate_Player,function(value)
+P:Toggle("Spectate Player",_G.Spectate_Player,function(value)
  _G.Spectate_Player = value
 end)
 
@@ -9119,7 +9119,7 @@ spawn(function()
 	end
 end)
 
-P:Toggle("Dịch Chuyển Đến Player",_G.Teleport_to_Player,function(value)
+P:Toggle("Teleport to Player",_G.Teleport_to_Player,function(value)
  _G.Teleport_to_Player = value
 StopTween(_G.Teleport_to_Player)
 end)
@@ -9137,7 +9137,7 @@ spawn(function()
 	end
 end)
 
-P:Toggle("Auto Giết Player [Melee]",_G.Auto_Kill_Player_Melee,function(value)
+P:Toggle("Auto Kill Player [Melee]",_G.Auto_Kill_Player_Melee,function(value)
  _G.Auto_Kill_Player_Melee = value
 StopTween(_G.Auto_Kill_Player_Melee)
 end)
@@ -9169,7 +9169,7 @@ spawn(function()
 	end
 end)
 
-P:Toggle("Auto Giết Player [Súng]",_G.Auto_Kill_Player_Gun,function(value)
+P:Toggle("Auto Kill Player [Gun]",_G.Auto_Kill_Player_Gun,function(value)
  _G.Auto_Kill_Player_Gun = value
 StopTween(_G.Auto_Kill_Player_Gun)
 end)
@@ -9207,22 +9207,22 @@ spawn(function()
 	end
 end)
 
-Teleport:Seperator(" Thế Giới ")
+Teleport:Seperator(" WORLD ")
  
- Teleport:Button("Teleport Đến Sea 1",function()
+ Teleport:Button("Teleport To Old World",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")
   end)
  
- Teleport:Button("Teleport Đến Sea 2",function()
+ Teleport:Button("Teleport To Second Sea",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
  end)
 
  
- Teleport:Button("Teleport Đến Sea 3",function()
+ Teleport:Button("Teleport To Third Sea",function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
   end)
  
- Teleport:Button("Teleport Đến SeaBeast",function()
+ Teleport:Button("Teleport to Seabeast",function()
   for i,v in pairs(game:GetService("Workspace").SeaBeasts:GetChildren()) do
   if v:FindFirstChild("HumanoidRootPart") then
   topos(v.HumanoidRootPart.CFrame*CFrame.new(0,100,0))
@@ -9230,10 +9230,10 @@ Teleport:Seperator(" Thế Giới ")
   end
  end)
  
- Teleport:Seperator(" Đảo ")
+ Teleport:Seperator(" Island ")
  
  if World1 then
- Teleport:Dropdown("Chọn Đảo", {
+ Teleport:Dropdown("Select Island", {
   "WindMill",
   "Marine",
   "Middle Town",
@@ -9704,24 +9704,24 @@ if World2 or World3 then
 Dungeon:Seperator("Use in Dungeon Only!")
 
 chip = {
-	"Lửa", 
-	"Băng", 
-	"Chấn Động", 
-	"Ánh Sáng",
-	"Bóng Tối",
-	"Tơ",
-	"À Lôi",
-	"Dung Nham",
-	"Phật Tổ",
-	"Cát",
-	"Phượng Hoàng"
+	"Flame", 
+	"Ice", 
+	"Quake", 
+	"Light",
+	"Dark",
+	"String",
+	"Rumble",
+	"Magma",
+	"Human: Buddha",
+	"Sand",
+	"Bird: Phoenix"
 }
 
-Dungeon:Dropdown("Chọn Dungeon",chip,function(value)
+Dungeon:Dropdown("Select Dungeon",chip,function(value)
  _G.Select_Dungeon = value
 end)
 
-Dungeon:Toggle("Auto Mua Chip Dungeon",_G.Auto_Buy_Chips_Dungeon,function(value)
+Dungeon:Toggle("Auto Buy Chip Dungeon",_G.Auto_Buy_Chips_Dungeon,function(value)
  _G.Auto_Buy_Chips_Dungeon = value
 end)
 
@@ -9743,7 +9743,7 @@ spawn(function()
 end)
 
 
-Dungeon:Toggle("Auto Bắt Đầu Dungeon",_G.Auto_StartRaid,function(value)
+Dungeon:Toggle("Auto Start Dungeon",_G.Auto_StartRaid,function(value)
  _G.Auto_StartRaid = value
 end)
 
@@ -9765,7 +9765,7 @@ spawn(function()
     end
     end)
 
-Dungeon:Toggle("Auto Đảo Tiếp Theo",_G.Auto_Next_Island,function(value)
+Dungeon:Toggle("Auto Next Island",_G.Auto_Next_Island,function(value)
  _G.Auto_Next_Island = value
 end)
 
@@ -9811,7 +9811,7 @@ spawn(function()
     end
 end)
 
-Dungeon:Toggle("Auto ",_G.Auto_Awake,function(value)
+Dungeon:Toggle("Auto Awake",_G.Auto_Awake,function(value)
  _G.Auto_Awake = value 
 end)
 
