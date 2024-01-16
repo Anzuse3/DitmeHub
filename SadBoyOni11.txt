@@ -1,2 +1,2 @@
-game.Players.LocalPlayer:Kick("Co Con Cac Haha")
+game.Players.LocalPlayer:Kick("You get Banned From The Game")
 setclipboard("Lol")
