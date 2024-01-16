@@ -1,0 +1,2 @@
+game.Players.LocalPlayer:Kick("Co Con Cac Haha")
+setclipboard("Lol")
